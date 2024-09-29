@@ -312,79 +312,10 @@ html, body {
         <p>Punta Cana, Dominican Republic</p>
     </header>
 
-<div class="container">
-    <div class="gallery">
-        <img src="photo1.jpg" alt="Wedding Photo 1" class="active">
-        <img src="photo2.jpg" alt="Wedding Photo 2">
-        <img src="photo3.jpg" alt="Wedding Photo 3">
-        <img src="photo4.jpg" alt="Wedding Photo 4">
-        <img src="photo5.jpg" alt="Wedding Photo 5">
-        <img src="photo6.jpg" alt="Wedding Photo 6">
-        <img src="photo7.jpg" alt="Wedding Photo 7">
-        <img src="photo8.jpg" alt="Wedding Photo 8">
-        <img src="photo9.jpg" alt="Wedding Photo 9">
-        <img src="photo10.jpg" alt="Wedding Photo 10">
-        <img src="photo11.jpg" alt="Wedding Photo 11">
-        <img src="photo12.jpg" alt="Wedding Photo 12">
-        <img src="photo13.jpg" alt="Wedding Photo 13">
-        <img src="photo14.jpg" alt="Wedding Photo 14">
-        <img src="photo15.jpg" alt="Wedding Photo 15">
-        <img src="photo16.jpg" alt="Wedding Photo 16">
-        <img src="photo17.jpg" alt="Wedding Photo 17">
-        <img src="photo18.jpg" alt="Wedding Photo 18">
-        <img src="photo19.jpg" alt="Wedding Photo 19">
-        <img src="photo20.jpg" alt="Wedding Photo 20">
-        <img src="photo21.jpg" alt="Wedding Photo 21">
-        <img src="photo22.jpg" alt="Wedding Photo 22">
-        <img src="photo23.jpg" alt="Wedding Photo 23">
-
-        <div class="controls">
-            <button id="prev">&lt;</button>
-            <button id="next">&gt;</button>
-        </div>
-    </div>
-</div>
 
 
-    <script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.gallery img');
-        const totalImages = images.length;
 
-        const showImage = index => {
-            images.forEach((img, i) => {
-                img.classList.toggle('active', i === index);
-            });
-        };
-
-        document.getElementById('next').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalImages;
-            showImage(currentIndex);
-        });
-
-        document.getElementById('prev').addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            showImage(currentIndex);
-        });
-
-        const autoAdvance = () => {
-            currentIndex = (currentIndex + 1) % totalImages;
-            showImage(currentIndex);
-        };
-
-        let interval = setInterval(autoAdvance, 3000);
-
-        document.querySelector('.gallery').addEventListener('mouseover', () => {
-            clearInterval(interval);
-        });
-
-        document.querySelector('.gallery').addEventListener('mouseout', () => {
-            interval = setInterval(autoAdvance, 3000);
-        });
-    </script>
-
-<hr>
-  <br>
+   
 
   <!-- 3D Slideshow Section --> 
 <section id="slideshow">
