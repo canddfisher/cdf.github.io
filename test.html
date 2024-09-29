@@ -3,116 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Announcing Christian and Dean Fisher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Christian & Dena Fisher Wedding Announcement</title>
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
         }
+
+        header {
+            background-color: #87CEEB;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
         .container {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 20px auto;
+            padding: 10px;
             text-align: center;
         }
-        h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3em;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        .details {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
+
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
+            position: relative;
+            max-width: 100%;
+            height: 400px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
+
         .gallery img {
             width: 100%;
-            height: auto;
-        }
-        @media (min-width: 600px) {
-            .gallery img {
-                width: calc(50% - 10px);
-            }
-        }
-        @media (min-width: 900px) {
-            .gallery img {
-                width: calc(33.333% - 10px);
-            }
-        }
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            object-fit: cover;
+            display: none;
         }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
+
+        .gallery img.active {
+            display: block;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .controls button {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .controls button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        @media only screen and (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .gallery {
+                height: 300px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <header>
+        <h1>Christian & Dena Fisher</h1>
+        <p>Joined in marriage on May 20, 2024</p>
+        <p>Celebrating love at the beach</p>
+    </header>
+
     <div class="container">
-        <h1>Announcing Christian and Dean Fisher</h1>
-        <p class="details">We are thrilled to announce the wedding of Christian and Dean Fisher, which took place on a beautiful beach. More details about the wedding will be shared soon.</p>
         <div class="gallery">
-            <img src="photo1.jpg" alt="Photo 1">
-            <img src="photo2.jpg" alt="Photo 2">
-            <img src="photo3.jpg" alt="Photo 3">
-            <img src="photo4.jpg" alt="Photo 4">
-            <img src="photo5.jpg" alt="Photo 5">
-            <img src="photo6.jpg" alt="Photo 6">
-            <img src="photo7.jpg" alt="Photo 7">
-            <img src="photo8.jpg" alt="Photo 8">
-            <img src="photo9.jpg" alt="Photo 9">
-            <img src="photo10.jpg" alt="Photo 10">
-            <img src="photo11.jpg" alt="Photo 11">
-            <img src="photo12.jpg" alt="Photo 12">
-            <img src="photo13.jpg" alt="Photo 13">
-            <img src="photo14.jpg" alt="Photo 14">
-            <img src="photo15.jpg" alt="Photo 15">
-            <img src="photo16.jpg" alt="Photo 16">
-            <img src="photo17.jpg" alt="Photo 17">
-            <img src="photo18.jpg" alt="Photo 18">
-            <img src="photo19.jpg" alt="Photo 19">
-            <img src="photo20.jpg" alt="Photo 20">
-            <img src="photo21.jpg" alt="Photo 21">
-            <img src="photo22.jpg" alt="Photo 22">
-            <img src="photo23.jpg" alt="Photo 23">
+            <img src="photo1.jpg" alt="Wedding Photo 1" class="active">
+            <img src="photo2.jpg" alt="Wedding Photo 2">
+            <img src="photo3.jpg" alt="Wedding Photo 3">
+            <!-- Add more photos as needed -->
+            <img src="photo23.jpg" alt="Wedding Photo 23">
+
+            <div class="controls">
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+            </div>
         </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const gallery = document.querySelector('.gallery');
-            gallery.addEventListener('click', (e) => {
-                if (e.target.tagName === 'IMG') {
-                    const src = e.target.src;
-                    const lightbox = document.createElement('div');
-                    lightbox.classList.add('lightbox');
-                    lightbox.innerHTML = `<img src="${src}" alt="Enlarged Photo">`;
-                    document.body.appendChild(lightbox);
-                    lightbox.addEventListener('click', () => {
-                        document.body.removeChild(lightbox);
-                    });
-                }
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.gallery img');
+        const totalImages = images.length;
+
+        const showImage = index => {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
             });
+        };
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            showImage(currentIndex);
+        });
+
+        const autoAdvance = () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        };
+
+        let interval = setInterval(autoAdvance, 3000);
+
+        document.querySelector('.gallery').addEventListener('mouseover', () => {
+            clearInterval(interval);
+        });
+
+        document.querySelector('.gallery').addEventListener('mouseout', () => {
+            interval = setInterval(autoAdvance, 3000);
         });
     </script>
+
 </body>
 </html>
