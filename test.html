@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Browser</title>
+    <link rel="stylesheet" href="path/to/your/css/framework.css">
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+        @media (min-width: 600px) {
+            .gallery img {
+                width: calc(50% - 10px);
+            }
+        }
+        @media (min-width: 900px) {
+            .gallery img {
+                width: calc(33.333% - 10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="photo1.jpg" alt="Photo 1">
+        <img src="photo2.jpg" alt="Photo 2">
+        <img src="photo3.jpg" alt="Photo 3">
+        <!-- Add more photos as needed -->
+    </div>
+</body>
+</html>
