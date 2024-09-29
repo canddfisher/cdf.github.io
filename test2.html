@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian & Dena Fisher Wedding Announcement</title>
+    <!-- Add Google Fonts to support a variety of fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Pacifico&family=Lobster&family=Roboto:wght@400;700&family=Cinzel:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+ 
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        header {
+            background-color: #87CEEB;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .gallery {
+            position: relative;
+            max-width: 100%;
+            height: 400px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: none;
+        }
+
+        .gallery img.active {
+            display: block;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .controls button {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .controls button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        @media only screen and (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .gallery {
+                height: 300px;
+            }
+        }
+       
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #fff;
+        }
+
+        /* Font option 1: Classic serif */
+        .font-option-1 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Font option 2: Elegant script */
+        .font-option-2 {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        /* Font option 3: Fun and casual */
+        .font-option-3 {
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* Font option 4: Bold and stylish */
+        .font-option-4 {
+            font-family: 'Lobster', cursive;
+        }
+
+        /* Font option 5: Simple and modern */
+        .font-option-5 {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Font option 6: Formal and distinguished */
+        .font-option-6 {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Font option 7: Playful script */
+        .font-option-7 {
+            font-family: 'Dancing Script', cursive;
+        }
+    </style>
+
+  <style>
+    /* 3D Slideshow */ 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #6adecd;
+}
+
+#slideshow {
+  margin: 0 auto;
+  padding-top: 50px;
+  height: 600px;
+  width: 100%;
+  background-color: #6adecd;
+  box-sizing: border-box;
+}
+
+.slideshow-title {
+  font-family: 'Allerta Stencil';
+  font-size: 62px;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 25%;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+.sub-heading {
+  padding-top: 50px;
+  font-size: 18px;
+} .sub-heading-two {
+  font-size: 15px;
+} .sub-heading-three {
+  font-size: 13px;
+} .sub-heading-four {
+  font-size: 11px;
+} .sub-heading-five {
+  font-size: 9px;
+} .sub-heading-six {
+  font-size: 7px;
+} .sub-heading-seven {
+  font-size: 5px;
+} .sub-heading-eight {
+  font-size: 3px;
+} .sub-heading-nine {
+  font-size: 1px;
+}
+
+.entire-content {
+  margin: auto;
+  width: 190px;
+  perspective: 1000px;
+  position: relative;
+  padding-top: 80px;
+}
+
+.content-carrousel {
+  width: 100%;
+  position: absolute;
+  float: right;
+  animation: rotar 15s infinite linear;
+  transform-style: preserve-3d;
+}
+
+.content-carrousel:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.content-carrousel figure {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #3b444b;
+  overflow: hidden;
+  position: absolute;
+}
+
+/*
+    .content-carrousel figure {
+    position: absolute;
+    width: 200px; /* Adjust as necessary */
+    height: 200px; /* Adjust as necessary */
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+    
+*/
+
+/* Generate the rotation for each child */
+.content-carrousel figure:nth-child(1)  { transform: rotateY(0deg) translateZ(300px); }
+.content-carrousel figure:nth-child(2)  { transform: rotateY(15.65deg) translateZ(300px); }
+.content-carrousel figure:nth-child(3)  { transform: rotateY(31.3deg) translateZ(300px); }
+.content-carrousel figure:nth-child(4)  { transform: rotateY(46.95deg) translateZ(300px); }
+.content-carrousel figure:nth-child(5)  { transform: rotateY(62.6deg) translateZ(300px); }
+.content-carrousel figure:nth-child(6)  { transform: rotateY(78.25deg) translateZ(300px); }
+.content-carrousel figure:nth-child(7)  { transform: rotateY(93.9deg) translateZ(300px); }
+.content-carrousel figure:nth-child(8)  { transform: rotateY(109.55deg) translateZ(300px); }
+.content-carrousel figure:nth-child(9)  { transform: rotateY(125.2deg) translateZ(300px); }
+.content-carrousel figure:nth-child(10) { transform: rotateY(140.85deg) translateZ(300px); }
+.content-carrousel figure:nth-child(11) { transform: rotateY(156.5deg) translateZ(300px); }
+.content-carrousel figure:nth-child(12) { transform: rotateY(172.15deg) translateZ(300px); }
+.content-carrousel figure:nth-child(13) { transform: rotateY(187.8deg) translateZ(300px); }
+.content-carrousel figure:nth-child(14) { transform: rotateY(203.45deg) translateZ(300px); }
+.content-carrousel figure:nth-child(15) { transform: rotateY(219.1deg) translateZ(300px); }
+.content-carrousel figure:nth-child(16) { transform: rotateY(234.75deg) translateZ(300px); }
+.content-carrousel figure:nth-child(17) { transform: rotateY(250.4deg) translateZ(300px); }
+.content-carrousel figure:nth-child(18) { transform: rotateY(266.05deg) translateZ(300px); }
+.content-carrousel figure:nth-child(19) { transform: rotateY(281.7deg) translateZ(300px); }
+.content-carrousel figure:nth-child(20) { transform: rotateY(297.35deg) translateZ(300px); }
+.content-carrousel figure:nth-child(21) { transform: rotateY(313deg) translateZ(300px); }
+.content-carrousel figure:nth-child(22) { transform: rotateY(328.65deg) translateZ(300px); }
+.content-carrousel figure:nth-child(23) { transform: rotateY(344.3deg) translateZ(300px); }
+
+
+.shadow {
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px #000;
+    border-radius: 1px;
+}
+
+.content-carrousel img {
+  image-rendering: auto;
+  transition: all 300ms;
+  width: 100%;
+  height: 100%;
+}
+
+.content-carrousel img:hover {
+  transform: scale(1.2);
+  transition: all 300ms;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotateY(0deg);
+  } to {
+    transform: rotateY(360deg);
+  }
+}
+  </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- Duplicate <h1> with various font options -->
+        
+        <!-- Option 1: Classic serif -->
+        <h1 class="font-option-1">Christian & Dena Fisher</h1>
+        
+        <!-- Option 2: Elegant script -->
+        <h1 class="font-option-2">Christian & Dena Fisher</h1>
+        
+        <!-- Option 3: Fun and casual -->
+        <h1 class="font-option-3">Christian & Dena Fisher</h1>
+        
+        <!-- Option 4: Bold and stylish -->
+        <h1 class="font-option-4">Christian & Dena Fisher</h1>
+        
+        <!-- Option 5: Simple and modern -->
+        <h1 class="font-option-5">Christian & Dena Fisher</h1>
+        
+        <!-- Option 6: Formal and distinguished -->
+        <h1 class="font-option-6">Christian & Dena Fisher</h1>
+        
+        <!-- Option 7: Playful script -->
+        <h1 class="font-option-7">Christian & Dena Fisher</h1>
+        
+        <p>Joined in marriage on May 20, 2024</p>
+        <p>Punta Cana, Dominican Republic</p>
+    </header>
+
+<div class="container">
+    <div class="gallery">
+        <img src="photo1.jpg" alt="Wedding Photo 1" class="active">
+        <img src="photo2.jpg" alt="Wedding Photo 2">
+        <img src="photo3.jpg" alt="Wedding Photo 3">
+        <img src="photo4.jpg" alt="Wedding Photo 4">
+        <img src="photo5.jpg" alt="Wedding Photo 5">
+        <img src="photo6.jpg" alt="Wedding Photo 6">
+        <img src="photo7.jpg" alt="Wedding Photo 7">
+        <img src="photo8.jpg" alt="Wedding Photo 8">
+        <img src="photo9.jpg" alt="Wedding Photo 9">
+        <img src="photo10.jpg" alt="Wedding Photo 10">
+        <img src="photo11.jpg" alt="Wedding Photo 11">
+        <img src="photo12.jpg" alt="Wedding Photo 12">
+        <img src="photo13.jpg" alt="Wedding Photo 13">
+        <img src="photo14.jpg" alt="Wedding Photo 14">
+        <img src="photo15.jpg" alt="Wedding Photo 15">
+        <img src="photo16.jpg" alt="Wedding Photo 16">
+        <img src="photo17.jpg" alt="Wedding Photo 17">
+        <img src="photo18.jpg" alt="Wedding Photo 18">
+        <img src="photo19.jpg" alt="Wedding Photo 19">
+        <img src="photo20.jpg" alt="Wedding Photo 20">
+        <img src="photo21.jpg" alt="Wedding Photo 21">
+        <img src="photo22.jpg" alt="Wedding Photo 22">
+        <img src="photo23.jpg" alt="Wedding Photo 23">
+
+        <div class="controls">
+            <button id="prev">&lt;</button>
+            <button id="next">&gt;</button>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.gallery img');
+        const totalImages = images.length;
+
+        const showImage = index => {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        };
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            showImage(currentIndex);
+        });
+
+        const autoAdvance = () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        };
+
+        let interval = setInterval(autoAdvance, 3000);
+
+        document.querySelector('.gallery').addEventListener('mouseover', () => {
+            clearInterval(interval);
+        });
+
+        document.querySelector('.gallery').addEventListener('mouseout', () => {
+            interval = setInterval(autoAdvance, 3000);
+        });
+    </script>
+
+<hr>
+  <br>
+
+  <!-- 3D Slideshow Section --> 
+<section id="slideshow">
+    <div class="entire-content">
+        <div class="content-carrousel">
+            <figure class="shadow"><img src="photo1.jpg" alt="Photo 1"></figure>
+            <figure class="shadow"><img src="photo2.jpg" alt="Photo 2"></figure>
+            <figure class="shadow"><img src="photo3.jpg" alt="Photo 3"></figure>
+            <figure class="shadow"><img src="photo4.jpg" alt="Photo 4"></figure>
+            <figure class="shadow"><img src="photo5.jpg" alt="Photo 5"></figure>
+            <figure class="shadow"><img src="photo6.jpg" alt="Photo 6"></figure>
+            <figure class="shadow"><img src="photo7.jpg" alt="Photo 7"></figure>
+            <figure class="shadow"><img src="photo8.jpg" alt="Photo 8"></figure>
+            <figure class="shadow"><img src="photo9.jpg" alt="Photo 9"></figure>
+            <figure class="shadow"><img src="photo10.jpg" alt="Photo 10"></figure>
+            <figure class="shadow"><img src="photo11.jpg" alt="Photo 11"></figure>
+            <figure class="shadow"><img src="photo12.jpg" alt="Photo 12"></figure>
+            <figure class="shadow"><img src="photo13.jpg" alt="Photo 13"></figure>
+            <figure class="shadow"><img src="photo14.jpg" alt="Photo 14"></figure>
+            <figure class="shadow"><img src="photo15.jpg" alt="Photo 15"></figure>
+            <figure class="shadow"><img src="photo16.jpg" alt="Photo 16"></figure>
+            <figure class="shadow"><img src="photo17.jpg" alt="Photo 17"></figure>
+            <figure class="shadow"><img src="photo18.jpg" alt="Photo 18"></figure>
+            <figure class="shadow"><img src="photo19.jpg" alt="Photo 19"></figure>
+            <figure class="shadow"><img src="photo20.jpg" alt="Photo 20"></figure>
+            <figure class="shadow"><img src="photo21.jpg" alt="Photo 21"></figure>
+            <figure class="shadow"><img src="photo22.jpg" alt="Photo 22"></figure>
+            <figure class="shadow"><img src="photo23.jpg" alt="Photo 23"></figure>
+        </div>
+    </div>
+</section>
+
+  
+</body>
+</html>
