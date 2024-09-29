@@ -25,6 +25,21 @@
                 width: calc(33.333% - 10px);
             }
         }
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
     </style>
 </head>
 <body>
@@ -53,5 +68,23 @@
         <img src="photo22.jpg" alt="Photo 22">
         <img src="photo23.jpg" alt="Photo 23">
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.querySelector('.gallery');
+            gallery.addEventListener('click', (e) => {
+                if (e.target.tagName === 'IMG') {
+                    const src = e.target.src;
+                    const lightbox = document.createElement('div');
+                    lightbox.classList.add('lightbox');
+                    lightbox.innerHTML = `<img src="${src}" alt="Enlarged Photo">`;
+                    document.body.appendChild(lightbox);
+                    lightbox.addEventListener('click', () => {
+                        document.body.removeChild(lightbox);
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
