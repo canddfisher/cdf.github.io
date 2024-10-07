@@ -59,7 +59,7 @@
             align-items: flex-start;
             justify-content: center;
             height: 100vh;
-            padding-top: 100px; /* Adjust this value to fine-tune the vertical position */
+            padding-top: 100px;
         }
 
         .banner-text {
@@ -92,7 +92,15 @@
             color: #333;
         }
 
-        p {
+        #aboutContent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #aboutContent p {
             font-size: 1.2rem;
             line-height: 1.6;
             text-align: center;
@@ -100,6 +108,8 @@
             background-color: rgba(255, 255, 255, 0.8);
             padding: 15px;
             border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .gallery {
@@ -116,10 +126,25 @@
         }
 
         @media (max-width: 768px) {
+            nav {
+                position: static;
+                display: flex;
+                flex-direction: column;
+            }
+
             nav a {
                 float: none;
-                display: block;
                 text-align: left;
+            }
+
+            .content-section {
+                padding-top: 20px; /* Reduced padding for mobile */
+            }
+
+            #homeContent {
+                padding-top: 20px;
+                height: auto;
+                min-height: calc(100vh - 40px);
             }
 
             .banner-text h1 {
@@ -134,12 +159,8 @@
                 font-size: 2rem;
             }
 
-            p {
+            #aboutContent p {
                 font-size: 1rem;
-            }
-
-            #homeContent {
-                padding-top: 80px; /* Slightly reduced for mobile */
             }
         }
     </style>
@@ -227,7 +248,7 @@
             sections.forEach(section => {
                 section.style.display = 'none';
             });
-            document.getElementById(contentId).style.display = 'flex';
+            document.getElementById(contentId).style.display = contentId === 'homeContent' ? 'flex' : 'block';
         }
 
         // Show home content by default
