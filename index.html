@@ -1,20 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Announcing Christian & Dena Fisher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Cormorant Garamond', serif;
             background-color: white;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('mainpage.jpg') no-repeat center center/cover;
+            z-index: -1;
         }
 
         nav {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.8);
             overflow: hidden;
             position: fixed;
             top: 0;
@@ -35,58 +48,61 @@
         }
 
         nav a:hover {
-            background-color: #575757;
-        }
-
-        .banner {
-            position: relative;
-            height: 100vh;
-            background: url('mainpage.jpg') no-repeat center center/cover;
-            text-align: center;
+            background-color: rgba(87, 87, 87, 0.8);
         }
 
         .content-section {
-            display: none; /* Initially hidden */
-            padding: 100px 20px; /* Space below nav bar */
+            display: none;
+            padding: 100px 20px;
+            min-height: calc(100vh - 200px);
+            box-sizing: border-box;
         }
 
         #homeContent {
-            display: block; /* Home is shown initially */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
         .banner-text {
-            position: absolute;
-            top: 150px;
-            left: 50%;
-            transform: translateX(-50%);
+            text-align: center;
             color: black;
-            text-transform: uppercase;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
         }
 
         .banner-text h1 {
-            font-size: 64px;
+            font-size: 4rem;
             margin: 0;
             letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
         .banner-text p {
-            font-size: 28px;
+            font-size: 2rem;
             margin: 10px 0;
             letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 2.5rem;
             letter-spacing: 3px;
             text-transform: uppercase;
             text-align: center;
+            color: #333;
         }
 
         p {
-            font-size: 18px;
+            font-size: 1.2rem;
             line-height: 1.6;
             text-align: center;
             margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 5px;
         }
 
         .gallery {
@@ -99,8 +115,32 @@
         .gallery img {
             width: 100%;
             height: auto;
+            border-radius: 5px;
         }
 
+        @media (max-width: 768px) {
+            nav a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .banner-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .banner-text p {
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -114,7 +154,7 @@
     </nav>
 
     <!-- Full-Page Banner and Dynamic Content -->
-    <div id="content-container" class="banner">
+    <div id="content-container">
         <!-- Home Content -->
         <div id="homeContent" class="content-section">
             <div class="banner-text">
@@ -126,21 +166,21 @@
         <!-- About Us Content -->
         <div id="aboutContent" class="content-section">
             <h1>About Us</h1>
-            <p style="text-align: left;">
+            <p>
                 We are Christian and Dena, two souls united in love, faith, and a shared devotion to family. 
                 Starting our journey together as husband and wife, we are excited to build a life grounded in 
                 the values we cherish — love, commitment, and the joy of everyday moments.
             </p>
-            <p style="text-align: left;">
+            <p>
                 Christian serves as a fire protection engineer with the Army Corps of Engineers, proudly 
                 supporting U.S. interests in the Middle East. His dedication to safeguarding others extends beyond 
                 his work, always ensuring the well-being of those around him. Dena, a registered nurse, works 
                 alongside a team of surgeons, offering compassionate care to patients and supporting them through 
                 their medical journeys.
             </p>
-            <p style="text-align: left;">
-                When we’re not working, you’ll likely find us enjoying long walks, spending time in nature, 
-                or simply relaxing at home with our beloved pups, Hazel and Louis. They’re a constant source of joy 
+            <p>
+                When we're not working, you'll likely find us enjoying long walks, spending time in nature, 
+                or simply relaxing at home with our beloved pups, Hazel and Louis. They're a constant source of joy 
                 and companionship in our lives. Together, we look forward to the adventures that lie ahead, 
                 hand in hand, with faith guiding our way.
             </p>
@@ -150,28 +190,26 @@
         <div id="photosContent" class="content-section">
             <h1>Photo Gallery</h1>
             <div class="gallery">
-            <img src="photo1.jpg" alt="Wedding Photo 1">
-            <img src="photo2.jpg" alt="Wedding Photo 2">
-            <img src="photo3.jpg" alt="Wedding Photo 3">
-            <img src="photo4.jpg" alt="Wedding Photo 4">
-            <img src="photo5.jpg" alt="Wedding Photo 5">
-            <img src="photo6.jpg" alt="Wedding Photo 6">
-            <img src="photo7.jpg" alt="Wedding Photo 7">
-            <img src="photo9.jpg" alt="Wedding Photo 9">
-            <img src="photo10.jpg" alt="Wedding Photo 10">
-            <img src="photo11.jpg" alt="Wedding Photo 11">
-            <img src="photo12.jpg" alt="Wedding Photo 12">
-            <img src="photo13.jpg" alt="Wedding Photo 13">
-            <img src="photo14.jpg" alt="Wedding Photo 14">
-            <img src="photo15.jpg" alt="Wedding Photo 15">
-            <img src="photo16.jpg" alt="Wedding Photo 16">
-            <img src="photo18.jpg" alt="Wedding Photo 18">
-            <img src="photo19.jpg" alt="Wedding Photo 19">
-            <img src="photo20.jpg" alt="Wedding Photo 20">
-            <img src="photo22.jpg" alt="Wedding Photo 22">
-            <img src="photo23.jpg" alt="Wedding Photo 23">
-            
-                <!-- Add more photos as necessary -->
+                <img src="photo1.jpg" alt="Wedding Photo 1">
+                <img src="photo2.jpg" alt="Wedding Photo 2">
+                <img src="photo3.jpg" alt="Wedding Photo 3">
+                <img src="photo4.jpg" alt="Wedding Photo 4">
+                <img src="photo5.jpg" alt="Wedding Photo 5">
+                <img src="photo6.jpg" alt="Wedding Photo 6">
+                <img src="photo7.jpg" alt="Wedding Photo 7">
+                <img src="photo9.jpg" alt="Wedding Photo 9">
+                <img src="photo10.jpg" alt="Wedding Photo 10">
+                <img src="photo11.jpg" alt="Wedding Photo 11">
+                <img src="photo12.jpg" alt="Wedding Photo 12">
+                <img src="photo13.jpg" alt="Wedding Photo 13">
+                <img src="photo14.jpg" alt="Wedding Photo 14">
+                <img src="photo15.jpg" alt="Wedding Photo 15">
+                <img src="photo16.jpg" alt="Wedding Photo 16">
+                <img src="photo18.jpg" alt="Wedding Photo 18">
+                <img src="photo19.jpg" alt="Wedding Photo 19">
+                <img src="photo20.jpg" alt="Wedding Photo 20">
+                <img src="photo22.jpg" alt="Wedding Photo 22">
+                <img src="photo23.jpg" alt="Wedding Photo 23">
             </div>
         </div>
 
@@ -183,13 +221,12 @@
     </div>
 
     <script>
-        // Function to show the selected content and hide others
         function showContent(contentId) {
             const sections = document.querySelectorAll('.content-section');
             sections.forEach(section => {
-                section.style.display = 'none';  // Hide all sections
+                section.style.display = 'none';
             });
-            document.getElementById(contentId).style.display = 'block';  // Show the selected section
+            document.getElementById(contentId).style.display = 'block';
         }
     </script>
 
