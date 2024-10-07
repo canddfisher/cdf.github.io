@@ -3,153 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian & Dena Fisher Wedding Announcement</title>
-    <!-- Add Google Fonts to support a variety of fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Pacifico&family=Lobster&family=Roboto:wght@400;700&family=Cinzel:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
- 
+    <title>Announcing Christian & Dena Fisher</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        body, html {
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background-color: white;
         }
 
-        header {
-            background-color: #87CEEB;
-            color: #fff;
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
             text-align: center;
-            padding: 20px;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        header p {
-            font-size: 1.2em;
-            margin: 5px 0;
+        nav a:hover {
+            background-color: #575757;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 10px;
+        .banner {
+            height: 100vh;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            color: white;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .content {
+            padding: 80px 20px; /* Top padding for navbar space */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            letter-spacing: 2px;
         }
 
         .gallery {
-            position: relative;
-            max-width: 100%;
-            height: 400px;
-            overflow: hidden;
-            margin: 0 auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
         }
 
         .gallery img {
             width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: none;
+            height: auto;
         }
 
-        .gallery img.active {
-            display: block;
-        }
-
-        .controls {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .controls button {
-            background-color: rgba(255, 255, 255, 0.7);
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1.2em;
-        }
-
-        .controls button:hover {
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-
-        @media only screen and (max-width: 600px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            header p {
-                font-size: 1em;
-            }
-
-            .gallery {
-                height: 300px;
-            }
-        }
-       
-        h1 {
-            font-size: 2.5em;
-            margin: 0;
-            color: #fff;
-        }
-
-        /* Font option 1: Classic serif */
-        .font-option-1 {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Font option 2: Elegant script */
-        .font-option-2 {
-            font-family: 'Great Vibes', cursive;
-        }
-
-        /* Font option 3: Fun and casual */
-        .font-option-3 {
-            font-family: 'Pacifico', cursive;
-        }
-
-        /* Font option 4: Bold and stylish */
-        .font-option-4 {
-            font-family: 'Lobster', cursive;
-        }
-
-        /* Font option 5: Simple and modern */
-        .font-option-5 {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        /* Font option 6: Formal and distinguished */
-        .font-option-6 {
-            font-family: 'Cinzel', serif;
-        }
-
-        /* Font option 7: Playful script */
-        .font-option-7 {
-            font-family: 'Dancing Script', cursive;
+        footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            background-color: #f1f1f1;
+            margin-top: 40px;
         }
     </style>
 </head>
-
 <body>
 
-    <header>
-        <!-- Duplicate <h1> with various font options -->
-        
-       
-        <!-- Option 6: Formal and distinguished -->
-        <h1 class="font-option-6">Christian & Dena Fisher</h1>
-  
-        
-        <p>Joined in marriage on May 20, 2024</p>
-        <p>Punta Cana, Dominican Republic</p>
-    </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#photos">Photos</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<div class="container">
-    <div class="gallery">
+    <!-- Full-Page Banner -->
+    <div id="home" class="banner">
+        <div>Christian & Dena Fisher</div>
+        <div>Joined in marriage on May 20, 2024</div><div>Punta Cana, Dominican Republic</div>
+
+</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content" id="about">
+        <h1>About Us</h1>
+        <p>We are a dedicated team of professionals working to make the world a better place. Learn more about our story, mission, and values.</p>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="content" id="photos">
+        <h1>Photo Gallery</h1>
+        <div class="gallery">
         <img src="photo1.jpg" alt="Wedding Photo 1" class="active">
         <img src="photo2.jpg" alt="Wedding Photo 2">
         <img src="photo3.jpg" alt="Wedding Photo 3">
@@ -170,51 +129,19 @@
         <img src="photo20.jpg" alt="Wedding Photo 20">
         <img src="photo22.jpg" alt="Wedding Photo 22">
         <img src="photo23.jpg" alt="Wedding Photo 23">
-
-        <div class="controls">
-            <button id="prev">&lt;</button>
-            <button id="next">&gt;</button>
         </div>
     </div>
-</div>
 
+    <!-- Contact Section -->
+    <div class="content" id="contact">
+        <h1>Contact Us</h1>
+        <p>Email: CandDFisher@gmail.com</p>
+    </div>
 
-    <script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.gallery img');
-        const totalImages = images.length;
-
-        const showImage = index => {
-            images.forEach((img, i) => {
-                img.classList.toggle('active', i === index);
-            });
-        };
-
-        document.getElementById('next').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalImages;
-            showImage(currentIndex);
-        });
-
-        document.getElementById('prev').addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            showImage(currentIndex);
-        });
-
-        const autoAdvance = () => {
-            currentIndex = (currentIndex + 1) % totalImages;
-            showImage(currentIndex);
-        };
-
-        let interval = setInterval(autoAdvance, 3000);
-
-        document.querySelector('.gallery').addEventListener('mouseover', () => {
-            clearInterval(interval);
-        });
-
-        document.querySelector('.gallery').addEventListener('mouseout', () => {
-            interval = setInterval(autoAdvance, 3000);
-        });
-    </script>
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Christian and Dena. All rights reserved.
+    </footer>
 
 </body>
 </html>
