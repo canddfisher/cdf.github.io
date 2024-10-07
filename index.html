@@ -38,16 +38,31 @@
         }
 
         .banner {
+            position: relative;
             height: 100vh;
             background: url('mainpage.jpg') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            color: white;
-            font-size: 36px;
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: black;
             text-transform: uppercase;
+        }
+
+        .banner-text h1 {
+            font-size: 64px;
+            margin: 0;
             letter-spacing: 3px;
+        }
+
+        .banner-text p {
+            font-size: 28px;
+            margin: 10px 0;
+            letter-spacing: 2px;
         }
 
         .content {
@@ -93,42 +108,46 @@
 
     <!-- Full-Page Banner -->
     <div id="home" class="banner">
-        <div>Christian & Dena Fisher</div>
-        <div>Joined in marriage on May 20, 2024</div><div>Punta Cana, Dominican Republic</div>
-
-</div>
+        <div class="banner-text">
+            <h1>Christian & Dena</h1>
+            <p>05 . 20 . 2024</p>
+        </div>
     </div>
 
     <!-- Main Content -->
     <div class="content" id="about">
         <h1>About Us</h1>
-        <p>We are a dedicated team of professionals working to make the world a better place. Learn more about our story, mission, and values.</p>
+        <p>We are Christian and Dena, two souls united in love, faith, and a shared devotion to family. Starting our journey together as husband and wife, we are excited to build a life grounded in the values we cherish — love, commitment, and the joy of everyday moments.
+
+Christian serves as a fire protection engineer with the Army Corps of Engineers, proudly supporting U.S. interests in the Middle East. His dedication to safeguarding others extends beyond his work, always ensuring the well-being of those around him. Dena, a registered nurse, works alongside a team of surgeons, offering compassionate care to patients and supporting them through their medical journeys.
+
+When we’re not working, you’ll likely find us enjoying long walks, spending time in nature, or simply relaxing at home with our beloved pups, Hazel and Louis. They’re a constant source of joy and companionship in our lives. Together, we look forward to the adventures that lie ahead, hand in hand, with faith guiding our way.</p>
     </div>
 
     <!-- Photo Gallery -->
     <div class="content" id="photos">
         <h1>Photo Gallery</h1>
         <div class="gallery">
-        <img src="photo1.jpg" alt="Wedding Photo 1" class="active">
-        <img src="photo2.jpg" alt="Wedding Photo 2">
-        <img src="photo3.jpg" alt="Wedding Photo 3">
-        <img src="photo4.jpg" alt="Wedding Photo 4">
-        <img src="photo5.jpg" alt="Wedding Photo 5">
-        <img src="photo6.jpg" alt="Wedding Photo 6">
-        <img src="photo7.jpg" alt="Wedding Photo 7">
-        <img src="photo9.jpg" alt="Wedding Photo 9">
-        <img src="photo10.jpg" alt="Wedding Photo 10">
-        <img src="photo11.jpg" alt="Wedding Photo 11">
-        <img src="photo12.jpg" alt="Wedding Photo 12">
-        <img src="photo13.jpg" alt="Wedding Photo 13">
-        <img src="photo14.jpg" alt="Wedding Photo 14">
-        <img src="photo15.jpg" alt="Wedding Photo 15">
-        <img src="photo16.jpg" alt="Wedding Photo 16">
-        <img src="photo18.jpg" alt="Wedding Photo 18">
-        <img src="photo19.jpg" alt="Wedding Photo 19">
-        <img src="photo20.jpg" alt="Wedding Photo 20">
-        <img src="photo22.jpg" alt="Wedding Photo 22">
-        <img src="photo23.jpg" alt="Wedding Photo 23">
+            <img src="photo1.jpg" alt="Wedding Photo 1" class="active">
+            <img src="photo2.jpg" alt="Wedding Photo 2">
+            <img src="photo3.jpg" alt="Wedding Photo 3">
+            <img src="photo4.jpg" alt="Wedding Photo 4">
+            <img src="photo5.jpg" alt="Wedding Photo 5">
+            <img src="photo6.jpg" alt="Wedding Photo 6">
+            <img src="photo7.jpg" alt="Wedding Photo 7">
+            <img src="photo9.jpg" alt="Wedding Photo 9">
+            <img src="photo10.jpg" alt="Wedding Photo 10">
+            <img src="photo11.jpg" alt="Wedding Photo 11">
+            <img src="photo12.jpg" alt="Wedding Photo 12">
+            <img src="photo13.jpg" alt="Wedding Photo 13">
+            <img src="photo14.jpg" alt="Wedding Photo 14">
+            <img src="photo15.jpg" alt="Wedding Photo 15">
+            <img src="photo16.jpg" alt="Wedding Photo 16">
+            <img src="photo18.jpg" alt="Wedding Photo 18">
+            <img src="photo19.jpg" alt="Wedding Photo 19">
+            <img src="photo20.jpg" alt="Wedding Photo 20">
+            <img src="photo22.jpg" alt="Wedding Photo 22">
+            <img src="photo23.jpg" alt="Wedding Photo 23">
         </div>
     </div>
 
