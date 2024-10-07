@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,6 +45,15 @@
             text-align: center;
         }
 
+        .content-section {
+            display: none; /* Initially hidden */
+            padding: 100px 20px; /* Space below nav bar */
+        }
+
+        #homeContent {
+            display: block; /* Home is shown initially */
+        }
+
         .banner-text {
             position: absolute;
             top: 150px;
@@ -65,14 +75,18 @@
             letter-spacing: 2px;
         }
 
-        .content {
-            padding: 80px 20px; /* Top padding for navbar space */
+        h1 {
+            font-size: 36px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
             text-align: center;
         }
 
-        h1 {
-            font-size: 24px;
-            letter-spacing: 2px;
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+            margin-top: 20px;
         }
 
         .gallery {
@@ -87,48 +101,56 @@
             height: auto;
         }
 
-        footer {
-            padding: 20px;
-            text-align: center;
-            font-size: 14px;
-            background-color: #f1f1f1;
-            margin-top: 40px;
-        }
     </style>
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#photos">Photos</a>
-        <a href="#contact">Contact</a>
+        <a href="javascript:void(0);" onclick="showContent('homeContent')">Home</a>
+        <a href="javascript:void(0);" onclick="showContent('aboutContent')">About Us</a>
+        <a href="javascript:void(0);" onclick="showContent('photosContent')">Photos</a>
+        <a href="javascript:void(0);" onclick="showContent('contactContent')">Contact</a>
     </nav>
 
-    <!-- Full-Page Banner -->
-    <div id="home" class="banner">
-        <div class="banner-text">
-            <h1>Christian & Dena</h1>
-            <p>05 . 20 . 2024</p>
+    <!-- Full-Page Banner and Dynamic Content -->
+    <div id="content-container" class="banner">
+        <!-- Home Content -->
+        <div id="homeContent" class="content-section">
+            <div class="banner-text">
+                <h1>Christian & Dena</h1>
+                <p>05 . 20 . 2024</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="content" id="about">
-        <h1>About Us</h1>
-        <p>We are Christian and Dena, two souls united in love, faith, and a shared devotion to family. Starting our journey together as husband and wife, we are excited to build a life grounded in the values we cherish — love, commitment, and the joy of everyday moments.
+        <!-- About Us Content -->
+        <div id="aboutContent" class="content-section">
+            <h1>About Us</h1>
+            <p>
+                We are Christian and Dena, two souls united in love, faith, and a shared devotion to family. 
+                Starting our journey together as husband and wife, we are excited to build a life grounded in 
+                the values we cherish — love, commitment, and the joy of everyday moments.
+            </p>
+            <p>
+                Christian serves as a fire protection engineer with the Army Corps of Engineers, proudly 
+                supporting U.S. interests in the Middle East. His dedication to safeguarding others extends beyond 
+                his work, always ensuring the well-being of those around him. Dena, a registered nurse, works 
+                alongside a team of surgeons, offering compassionate care to patients and supporting them through 
+                their medical journeys.
+            </p>
+            <p>
+                When we’re not working, you’ll likely find us enjoying long walks, spending time in nature, 
+                or simply relaxing at home with our beloved pups, Hazel and Louis. They’re a constant source of joy 
+                and companionship in our lives. Together, we look forward to the adventures that lie ahead, 
+                hand in hand, with faith guiding our way.
+            </p>
+        </div>
 
-Christian serves as a fire protection engineer with the Army Corps of Engineers, proudly supporting U.S. interests in the Middle East. His dedication to safeguarding others extends beyond his work, always ensuring the well-being of those around him. Dena, a registered nurse, works alongside a team of surgeons, offering compassionate care to patients and supporting them through their medical journeys.
-
-When we’re not working, you’ll likely find us enjoying long walks, spending time in nature, or simply relaxing at home with our beloved pups, Hazel and Louis. They’re a constant source of joy and companionship in our lives. Together, we look forward to the adventures that lie ahead, hand in hand, with faith guiding our way.</p>
-    </div>
-
-    <!-- Photo Gallery -->
-    <div class="content" id="photos">
-        <h1>Photo Gallery</h1>
-        <div class="gallery">
-            <img src="photo1.jpg" alt="Wedding Photo 1" class="active">
+        <!-- Photos Content -->
+        <div id="photosContent" class="content-section">
+            <h1>Photo Gallery</h1>
+            <div class="gallery">
+            <img src="photo1.jpg" alt="Wedding Photo 1">
             <img src="photo2.jpg" alt="Wedding Photo 2">
             <img src="photo3.jpg" alt="Wedding Photo 3">
             <img src="photo4.jpg" alt="Wedding Photo 4">
@@ -148,19 +170,28 @@ When we’re not working, you’ll likely find us enjoying long walks, spending 
             <img src="photo20.jpg" alt="Wedding Photo 20">
             <img src="photo22.jpg" alt="Wedding Photo 22">
             <img src="photo23.jpg" alt="Wedding Photo 23">
+            
+                <!-- Add more photos as necessary -->
+            </div>
+        </div>
+
+        <!-- Contact Us Content -->
+        <div id="contactContent" class="content-section">
+            <h1>Contact Us</h1>
+            <p>Email: CandDFisher@gmail.com</p>
         </div>
     </div>
 
-    <!-- Contact Section -->
-    <div class="content" id="contact">
-        <h1>Contact Us</h1>
-        <p>Email: CandDFisher@gmail.com</p>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 Christian and Dena. All rights reserved.
-    </footer>
+    <script>
+        // Function to show the selected content and hide others
+        function showContent(contentId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';  // Hide all sections
+            });
+            document.getElementById(contentId).style.display = 'block';  // Show the selected section
+        }
+    </script>
 
 </body>
 </html>
