@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Announcing Christian & Dena Fisher</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
     <style>
         body, html {
             margin: 0;
@@ -127,14 +128,17 @@
 
         @media (max-width: 768px) {
             nav {
-                position: static;
                 display: flex;
-                flex-direction: column;
+                justify-content: space-around;
             }
 
+            /* Replace text with icons for mobile */
             nav a {
-                float: none;
-                text-align: left;
+                font-size: 0;
+            }
+
+            nav a i {
+                font-size: 24px;
             }
 
             .content-section {
@@ -169,10 +173,10 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <a href="javascript:void(0);" onclick="showContent('homeContent')">Home</a>
-        <a href="javascript:void(0);" onclick="showContent('aboutContent')">About Us</a>
-        <a href="javascript:void(0);" onclick="showContent('photosContent')">Photos</a>
-        <a href="javascript:void(0);" onclick="showContent('contactContent')">Contact</a>
+        <a href="javascript:void(0);" onclick="showContent('homeContent')"><i class="fas fa-home"></i> <span>Home</span></a>
+        <a href="javascript:void(0);" onclick="showContent('aboutContent')"><i class="fas fa-info-circle"></i> <span>About Us</span></a>
+        <a href="javascript:void(0);" onclick="showContent('photosContent')"><i class="fas fa-images"></i> <span>Photos</span></a>
+        <a href="javascript:void(0);" onclick="showContent('contactContent')"><i class="fas fa-envelope"></i> <span>Contact</span></a>
     </nav>
 
     <!-- Full-Page Banner and Dynamic Content -->
@@ -212,26 +216,7 @@
         <div id="photosContent" class="content-section">
             <h1>Photo Gallery</h1>
             <div class="gallery">
-                <img src="photo1.jpg" alt="Wedding Photo 1">
-                <img src="photo2.jpg" alt="Wedding Photo 2">
-                <img src="photo3.jpg" alt="Wedding Photo 3">
-                <img src="photo4.jpg" alt="Wedding Photo 4">
-                <img src="photo5.jpg" alt="Wedding Photo 5">
-                <img src="photo6.jpg" alt="Wedding Photo 6">
-                <img src="photo7.jpg" alt="Wedding Photo 7">
-                <img src="photo9.jpg" alt="Wedding Photo 9">
-                <img src="photo10.jpg" alt="Wedding Photo 10">
-                <img src="photo11.jpg" alt="Wedding Photo 11">
-                <img src="photo12.jpg" alt="Wedding Photo 12">
-                <img src="photo13.jpg" alt="Wedding Photo 13">
-                <img src="photo14.jpg" alt="Wedding Photo 14">
-                <img src="photo15.jpg" alt="Wedding Photo 15">
-                <img src="photo16.jpg" alt="Wedding Photo 16">
-                <img src="photo18.jpg" alt="Wedding Photo 18">
-                <img src="photo19.jpg" alt="Wedding Photo 19">
-                <img src="photo20.jpg" alt="Wedding Photo 20">
-                <img src="photo22.jpg" alt="Wedding Photo 22">
-                <img src="photo23.jpg" alt="Wedding Photo 23">
+                <!-- Photo thumbnails here -->
             </div>
         </div>
 
